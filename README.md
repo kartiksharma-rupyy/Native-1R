@@ -95,3 +95,75 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
+
+
+## ⚠️ Known Issues
+
+- Jest tests are currently failing due to a React Native + Babel parsing issue
+- Application runs correctly on Android/iOS
+- Testing setup will be fixed in a later iteration
+
+
+
+
+# React Native CLI Boilerplate
+
+A clean and scalable **React Native CLI boilerplate** built with **TypeScript**, focused on:
+- Maintainable folder structure
+- Modular architecture
+- Easy scalability
+- Production-ready conventions
+
+This boilerplate is intended for real-world React Native applications.
+
+---
+
+## 📁 Project Structure
+
+firstapp \
+├── android/ # Android native code \
+├── ios/ # iOS native code \
+├── src/ # Application source code \
+│ ├── assets/ # Static assets (images, fonts, icons) \
+│ ├── components/ # Reusable UI components \
+│ │ └── Button.tsx \
+│ ├── screens/ # Screen-level components \
+│ │ └── HomeScreen.tsx \
+│ ├── navigation/ # Navigation setup \
+│ │ └── AppNavigator.tsx \
+│ ├── modules/ # Feature-based modules (domain driven) \
+│ │ └── auth/ \
+│ │ ├── api.ts \
+│ │ ├── hooks.ts \
+│ │ ├── types.ts \
+│ │ └── index.ts \
+│ ├── services/ # External services (API, storage, analytics) \
+│ │ └── apiClient.ts \
+│ ├── hooks/ # Shared custom hooks \
+│ │ └── useTheme.ts \
+│ ├── utils/ # Utility functions & helpers \
+│ │ └── delay.ts \
+│ ├── constants/ # App-wide constants \
+│ │ └── colors.ts \
+│ ├── theme/ # Theme & styling system \
+│ │ └── index.ts \
+│ ├── types/ # Global TypeScript types \
+│ │ └── index.d.ts \
+│ ├── tests/ # Unit tests \
+│ │ └── HomeScreen.test.tsx \
+│ └── App.tsx # Root application component \
+│ \
+├── tests/ # App-level tests \
+│ └── App.test.tsx \
+│ \
+├── .env.example # Environment variable template \
+├── .gitignore \
+├── babel.config.js # Babel configuration \
+├── metro.config.js # Metro bundler config \
+├── tsconfig.json # TypeScript configuration \
+├── jest.config.js # Jest configuration \
+├── package.json \
+└── README.md
+
+### Note: tests temporarily disabled
